@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://www.flaticon.com/free-icon/pizza_1404894" type="image/flaticon">
+    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>vegan pizza place</title>
 </head>
 <body>
-<div class="row">    
-<div class="col-md-6">
+<div class="heading">
+   <h1><strong>P!ZZA FARM</strong></h1>
+   <H2><STrong>VEGAN pizza delights</STrong></H2>
+</div>
+
+<div class="container row">   
+
     <h5><strong> Enter the specifications of your order.</strong></h5>
-    <div class="mydiv">size
+    <div class="mydiv col-6">size
+        <label for="time">Select a size</label>
         <select name="sizes" id="bigg">
             <option value="900">big</option>
             <option value="700">medium</option>
             <option value="500">small</option>
         </select>
-    </div>
-    <div class="mydiv">crust
+   
+            <label for="time">Select a crust</label>
             <select name="crustes" id="crest">
                 <option value="150">stuffed</option>
                 <option value="200">crispy</option>
                 <option value="300">gluten free</option>
             </select>
-    </div>
-    <div class="mydiv">topping
+    
+            <label for="time">Select a topping</label>
             <select name="topsies" id="creme">
                 <option value="100">Cheese</option>
                 <option value="100">Brocoli</option>
@@ -35,23 +43,24 @@
                 <option value="50">Kale</option>
             </select> 
     </div>
-
 </div>
-<div class="col-md-6">
+
+<form>
+<div class="col-6 order-details">
     <p>Who is ordering?</p>
-    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="text" id="name" placeholder="Enter your name"><br>
     <p>How can we contact you?</p>
-    <input type="text" id="number" placeholder="Enter your phone number"><br><br>
+    <input type="text" id="number" placeholder="Enter your phone number"><br>
     <p>where do i place the order to?</p>
-    <input type="text" id="location" placeholder="Enter your address"><br><br>
+    <input type="text" id="location" placeholder="Enter your address"><br>
     <button onclick="fn1()">submit</button>
-</div></div>
+</div>
 <div>
 <p>Do you want your pizza to be delivered to your location?</p>
-<button onclick="deliver()">Yes</button>
+<button onclick="pizzaDeliver()">Yes</button>
 <button onclick="fn3()">No</button>
 </div>
-
+</form>
 </body>
 <script type="text/javascript" src="./js/jquery-3.4.1.js" > </script>
 <script src="./js/scripts.js"></script>

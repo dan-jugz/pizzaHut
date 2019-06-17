@@ -3,7 +3,7 @@ function fn1(){
     alert(select.options[select.selectedIndex].value)
 };
 
-size = new Array['big','medium','small'];
+
 let orderName=document.getElementById("name").value;
 let orderNumber=document.getElementById("number").value;
 let location=document.getElementById("location").value;
@@ -14,14 +14,14 @@ function pizzaDeliver(orderName,orderNumber,location){
     alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
 };
 
-
+size = new Array['big','medium','small'];
 
 pizzaOrder.prototype.giveMePizza = function(size, crust, topping){
     if(size=='big'){price = 900}
     else if(size=='medium'){price = 700}
-    else(size=='small'){price = 500}
+    else(size=='small');{price = 500}
 
-    return price + addCrust + addTopping
+    return price + crust + topping
 }
 
 var crust = function addCrust(price){
@@ -44,10 +44,10 @@ $(document).ready(function(){
 //delivery things
 $(document).ready(function () {
     $("#deliver").click(function () {
-        alert("Delivery charges: $ 10 ")
+        alert("Delivery charges: 100 ")
         prompt("Enter you name ")
         prompt("Enter your location")
         prompt("Enter your address")
         alert("Your order will be deliver to your location")
  
-    });
+    })});
