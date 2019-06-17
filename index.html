@@ -20,7 +20,7 @@
     <div class="mydiv col-5">
         <label for="time">Select a size</label>
         <select name="sizes" id="bigg">
-            <option value="900">big</option>
+            <option id="big" value="900">big</option>
             <option value="700">medium</option>
             <option value="500">small</option>
         </select>
@@ -33,12 +33,12 @@
             </select>
     
             <label for="time">Select a topping </label> <br>
-            <input type="radio" name="gender" value="100"> Cheese<br>
-            <input type="radio" name="gender" value="100"> Brocoli<br>
-            <input type="radio" name="gender" value="150"> Mushroom<br>
-            <input type="radio" name="gender" value="150"> pineapple<br>
-            <input type="radio" name="gender" value="200"> Roasted beans<br>
-            <input type="radio" name="gender" value="200"> Ginger and kale<br>
+            <input type="radio" name="cheese" value="100"> Cheese<br>
+            <input type="radio" name="Brocoli" value="100"> Brocoli<br>
+            <input type="radio" name="Mushroom" value="150"> Mushroom<br>
+            <input type="radio" name="pineapple" value="150"> pineapple<br>
+            <input type="radio" name="Roasted" value="200"> Roasted beans<br>
+            <input type="radio" name="GingerAndKale" value="200"> Ginger and kale<br>
            
                
     <input type="number" id="quantity" placeholder="How many do you want">
@@ -50,7 +50,7 @@
 <div class="delivery">
     <p>Do you want your pizza to be delivered to your location?</p>
         <button onclick="pizzaDeliver()">Yes</button>
-        <button onclick="fn3()">No</button>
+        <button onclick="thanks()">No</button>
 </div>
 <div class="col-6 order-details">
     <p>Who is ordering?</p>

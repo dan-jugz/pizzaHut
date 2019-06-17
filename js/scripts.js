@@ -3,12 +3,13 @@ function fn1(){
     alert(select.options[select.selectedIndex].value)
 };
 
-
 let orderName=document.getElementById("name").value;
 let orderNumber=document.getElementById("number").value;
 let location=document.getElementById("location").value;
 
+function pizzaOrder(size, orderName,orderNumber,location){
 
+}
 
 function pizzaDeliver(orderName,orderNumber,location){
     alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
