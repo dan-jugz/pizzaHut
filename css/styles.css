@@ -4,3 +4,11 @@
     padding: 10px;
     max-width: 150px;
 }
+body{
+    background-image: url('../img/pizza.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 50px; 
+    margin-bottom: 0;
+}
