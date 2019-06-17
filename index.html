@@ -8,38 +8,40 @@
     <title>vegan pizza place</title>
 </head>
 <body>
+<div class="col-md-6">
+    <h5><strong> Enter the specifications of your order.</strong></h5>
     <div class="mydiv">size
         <select name="sizes" id="bigg">
             <option value=900>big</option>
             <option value="700">medium</option>
             <option value="500">small</option>
         </select>
-</div>
+    </div>
     <div class="mydiv">crust
             <select name="crustes" id="crest">
                 <option value="150">stuffed</option>
-                <option value="00">crispy</option>
-                <option value="00">gluten free</option>
+                <option value="200">crispy</option>
+                <option value="300">gluten free</option>
             </select>
     </div>
     <div class="mydiv">topping
             <select name="topsies" id="creme">
-                <option value="100">cheese</option>
-                <option value="100">brocoli</option>
-                <option value="200">mushroom</option>
-                <option value="200">tofu</option>
-                <option value="150">pineapple</option>
-                <option value="50">kale</option>
-            </select>
-
-        
+                <option value="100">Cheese</option>
+                <option value="100">Brocoli</option>
+                <option value="200">Mushroom</option>
+                <option value="200">Tofu</option>
+                <option value="150">Pineapple</option>
+                <option value="50">Kale</option>
+            </select> 
     </div>
 
-<div>
+</div>
+<div class="col-md-6">
+
     <input type="text" id="name" placeholder="Enter your name">
     <input type="text" id="number" placeholder="Enter your phone number">
     <input type="text" id="location" placeholder="Enter your address">
-    <button onclick="fn1()">submeet</button>
+    <button onclick="fn1()">submit</button>
 </div>
 <div>
 <p>Do you want your pizza to be delivered to your location?</p>
