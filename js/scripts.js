@@ -7,7 +7,14 @@ let orderName=document.getElementById("name").value;
 let orderNumber=document.getElementById("number").value;
 let location=document.getElementById("location").value;
 
-function pizzaOrder(size, orderName,orderNumber,location){
+function pizzaOrder(size, orderName,orderNumber,location,crust,topping,delivery){
+    this.size=size[];
+    this.orderName=orderName;
+    this.orderNumber=orderNumber;
+    this.location=location;
+    this.crust=crust;
+    this.topping=topping;
+    this.delivery=delivery;
 
 }
 
