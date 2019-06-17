@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(".order-details").hide();
+    $("#order-details").hide();
     $(".delivery").hide();
 
 function pizzaOrder(orderName,orderNumber,location,crust,topping,delivery){
@@ -9,9 +9,9 @@ function pizzaOrder(orderName,orderNumber,location,crust,topping,delivery){
     this.location=location;
 }
 
-let orderName=document.getElementById("name").value;
-let orderNumber=document.getElementById("number").value;
-let location=document.getElementById("location").value;
+let orderName =document.getElementById("name").value;
+let orderNumber =document.getElementById("number").value;
+let location =document.getElementById("location").value;
 
 
   
@@ -22,12 +22,15 @@ function pizza(size,crust,topping){
     this.pizzaPrice=0;
 };
 
-pizza.prototype.price(){
     var grandTotal = [];
     var pizzaSize = ["big", "medium", "small"];
     var pizzaCrust = ["crispy", "stuffed", "gluten-free"];
-    var pizzaTopping = ["cheese", "brocoli", "mushroom", "black-olives","pineapple","ginger-and-kale"];}
-  /**pizza size to pizza sizes */
+    var pizzaTopping = ["cheese", "brocoli", "mushroom", "black-olives","pineapple","ginger-and-kale"];
+  
+
+
+pizza.prototype.pizzaCost = function(){
+    /**pizza size to pizza sizes */
   if (this.pizzaSize === pizzaSize[0]) {
     pizzaPrice = +900;
   }
@@ -60,7 +63,19 @@ pizza.prototype.price(){
   return this.pizzaPrice;
 };
 
+Order.prototype.finalCost = function() {
+    var cartTotalPrice = [];
+    for (var arrayElement = 0; arrayElement < grandTotal.length; arrayElement++) {
+      cartTotalPrice += grandTotal[arrayElement];
+    }
+    return cartTotalPrice;
+  };
 
+
+function Address(address) {
+    this.address = address;
+    this.deliveryAddress = (address);
+  }
 
 
 
@@ -72,10 +87,24 @@ $(document).ready(function(){
     $('button').click(function(){
        $('div').slideToggle(1000);
     });
+    $("#submit-pizza").click(function() {
+        $("#deliver").toggle();
+      });
+    
+      $("#checkout-btn").click(function() {
+        $("#order-details").toggle();
+      });
     $('button').click(function(){
         $('.order-details').show(1000)
     })
 });
+$("#submit-pizza").click(function() {
+    $("#deliver").toggle();
+  });
+
+  $("#checkout-btn").click(function() {
+    $("#order-details").toggle();
+  });
 
 
 /*delivery things
@@ -112,5 +141,4 @@ var crust = function addCrust(price){
 
 var topping = function addTopping(price){
     return price*0.2
-};
-*/
+};****\

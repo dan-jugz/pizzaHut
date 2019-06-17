@@ -1,4 +1,4 @@
-# Triangle tracker
+# Pizza Farm
 A webpage on which you can order pizza and get an online receipt for your purchase th,Vrsn 1.0
 By Daniel Njuguna
 # Description
