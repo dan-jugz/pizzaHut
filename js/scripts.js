@@ -40,8 +40,13 @@ $(document).ready(function(){
     $('button').click(function(){
        $('div').slideToggle(1000);
     });
+    $('button').click(function(){
+        $('.order-details').show(1000)
+    })
 });
-//delivery things
+
+
+/*delivery things
 $(document).ready(function () {
     $("#deliver").click(function () {
         alert("Delivery charges: 100 ")

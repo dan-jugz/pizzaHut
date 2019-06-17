@@ -21,8 +21,9 @@ h1, h2{
     font-weight: bold;
     padding: 30px, 100px,10px ,150px;
 }
-order-details{
+.order-details{
     float: right;
-    background-color: green;
-    
+    display: none;
+
 }
+

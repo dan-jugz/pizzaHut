@@ -12,13 +12,12 @@
 <body>
 <div class="heading">
    <h1><strong>P!ZZA FARM</strong></h1>
-   <H2><STrong>VEGAN pizza delights</STrong></H2>
+   <H2><strong>VEGAN pizza delights</strong></H2>
 </div>
 
+<strong></strong><h5> Enter the specifications of your order.</h5></strong>
 <div class="container row">   
-
-    <h5><strong> Enter the specifications of your order.</strong></h5>
-    <div class="mydiv col-6">size
+    <div class="mydiv col-5">
         <label for="time">Select a size</label>
         <select name="sizes" id="bigg">
             <option value="900">big</option>
@@ -33,33 +32,36 @@
                 <option value="300">gluten free</option>
             </select>
     
-            <label for="time">Select a topping</label>
-            <select name="topsies" id="creme">
-                <option value="100">Cheese</option>
-                <option value="100">Brocoli</option>
-                <option value="200">Mushroom</option>
-                <option value="200">Tofu</option>
-                <option value="150">Pineapple</option>
-                <option value="50">Kale</option>
-            </select> 
-    </div>
+            <label for="time">Select a topping </label> <br>
+            <input type="radio" name="gender" value="100"> Cheese<br>
+            <input type="radio" name="gender" value="100"> Brocoli<br>
+            <input type="radio" name="gender" value="150"> Mushroom<br>
+            <input type="radio" name="gender" value="150"> pineapple<br>
+            <input type="radio" name="gender" value="200"> Roasted beans<br>
+            <input type="radio" name="gender" value="200"> Ginger and kale<br>
+           
+               
+    <input type="number" id="quantity" placeholder="How many do you want">
+    <button>Submit order</button>
+</div>
 </div>
 
 <form>
+<div class="delivery">
+    <p>Do you want your pizza to be delivered to your location?</p>
+        <button onclick="pizzaDeliver()">Yes</button>
+        <button onclick="fn3()">No</button>
+</div>
 <div class="col-6 order-details">
     <p>Who is ordering?</p>
     <input type="text" id="name" placeholder="Enter your name"><br>
     <p>How can we contact you?</p>
-    <input type="text" id="number" placeholder="Enter your phone number"><br>
+    <input type="number" id="contact" placeholder="Enter your phone number"><br>
     <p>where do i place the order to?</p>
     <input type="text" id="location" placeholder="Enter your address"><br>
     <button onclick="fn1()">submit</button>
 </div>
-<div>
-<p>Do you want your pizza to be delivered to your location?</p>
-<button onclick="pizzaDeliver()">Yes</button>
-<button onclick="fn3()">No</button>
-</div>
+
 </form>
 </body>
 <script type="text/javascript" src="./js/jquery-3.4.1.js" > </script>
