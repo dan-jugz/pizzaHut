@@ -3,18 +3,17 @@ function fn1(){
     alert(select.options[select.selectedIndex].value)
 };
 
-
-
-function pizzaOrder(orderName,orderNumber,location,size){
-    this.ordername = orderName;
-    this.orderNumber = orderNumber;
-    this.location = location;
-    this.size = size[];
-};
 size = new Array['big','medium','small'];
-var orderName=document.getElementById("name").value;
-var orderNumber=document.getElementById("number").value;
-var location=document.getElementById("location").value;
+let orderName=document.getElementById("name").value;
+let orderNumber=document.getElementById("number").value;
+let location=document.getElementById("location").value;
+
+
+
+function pizzaDeliver(orderName,orderNumber,location){
+    alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
+};
+
 
 
 pizzaOrder.prototype.giveMePizza = function(size, crust, topping){
@@ -22,7 +21,7 @@ pizzaOrder.prototype.giveMePizza = function(size, crust, topping){
     else if(size=='medium'){price = 700}
     else(size=='small'){price = 500}
 
-    return price
+    return price + addCrust + addTopping
 }
 
 var crust = function addCrust(price){
@@ -42,3 +41,13 @@ $(document).ready(function(){
        $('div').slideToggle(1000);
     });
 });
+//delivery things
+$(document).ready(function () {
+    $("#deliver").click(function () {
+        alert("Delivery charges: $ 10 ")
+        prompt("Enter you name ")
+        prompt("Enter your location")
+        prompt("Enter your address")
+        alert("Your order will be deliver to your location")
+ 
+    });
