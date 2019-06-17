@@ -15,21 +15,21 @@
    <H2><strong>VEGAN pizza delights</strong></H2>
 </div>
 
-<strong></strong><h5> Enter the specifications of your order.</h5></strong>
+<strong><h5> Enter the specifications of your order.</h5></strong>
 <div class="container row">   
     <div class="mydiv col-5">
         <label for="time">Select a size</label>
         <select name="sizes" id="bigg">
-            <option id="big" value="900">big</option>
-            <option value="700">medium</option>
-            <option value="500">small</option>
+            <option value="big">big(900)</option>
+            <option value="medium">medium(700)</option>
+            <option value="small">small(500)</option>
         </select>
    
             <label for="time">Select a crust</label>
             <select name="crustes" id="crest">
-                <option value="150">stuffed</option>
-                <option value="200">crispy</option>
-                <option value="300">gluten free</option>
+                <option value="stuffed">stuffed</option>
+                <option value="crispy">crispy</option>
+                <option value="gluten-free">gluten free</option>
             </select>
     
             <label for="time">Select a topping </label> <br>
@@ -37,11 +37,11 @@
             <input type="radio" name="Brocoli" value="100"> Brocoli<br>
             <input type="radio" name="Mushroom" value="150"> Mushroom<br>
             <input type="radio" name="pineapple" value="150"> pineapple<br>
-            <input type="radio" name="Roasted" value="200"> Roasted beans<br>
+            <input type="radio" name="black" value="200"> Black olives<br>
             <input type="radio" name="GingerAndKale" value="200"> Ginger and kale<br>
            
                
-    <input type="number" id="quantity" placeholder="How many do you want">
+    <input type="number" id="quantity" placeholder="How many pizzas d'you want">
     <button>Submit order</button>
 </div>
 </div>
@@ -52,12 +52,12 @@
         <button onclick="pizzaDeliver()">Yes</button>
         <button onclick="thanks()">No</button>
 </div>
-<div class="col-6 order-details">
-    <p>Who is ordering?</p>
+<div class="col-7 order-details">
+    <p class="text-primary">Who is ordering?</p>
     <input type="text" id="name" placeholder="Enter your name"><br>
-    <p>How can we contact you?</p>
+    <p class="text-success">How can we contact you?</p>
     <input type="number" id="contact" placeholder="Enter your phone number"><br>
-    <p>where do i place the order to?</p>
+    <p class="text-danger">where do i place the order to?</p>
     <input type="text" id="location" placeholder="Enter your address"><br>
     <button onclick="fn1()">submit</button>
 </div>

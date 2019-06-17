@@ -2,7 +2,7 @@
     border: 1px solid grey;
     margin: 5px;
     padding: 10px;
-    max-width: 250px;
+    max-width: 300px;
     background-color: green
 }
 body{
@@ -16,14 +16,13 @@ body{
 p{
     font-size: 30px;
 }
-h1, h2{
+.heading{
     position: relative;
     font-weight: bold;
-    padding: 30px, 100px,10px ,150px;
+    text-align: center;
 }
 .order-details{
     float: right;
-    display: none;
-
+    margin-right: 0px
 }
 
