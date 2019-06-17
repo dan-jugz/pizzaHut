@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    $("#order-details").hide();
-    $("#deliver").hide();
-    
+    $(".order-details").hide();
+    $(".delivery").hide();
+
 function pizzaOrder(orderName,orderNumber,location,crust,topping,delivery){
     
     this.orderName=orderName;
