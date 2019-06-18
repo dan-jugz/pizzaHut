@@ -1,3 +1,20 @@
+function pizza(size,crust,topping,deliver){
+  this.pizzaSize=size;
+  this.pizzaCrust=crust;
+  this.pizzaTopping=topping;
+  this.pizzaDeliver=deliver;
+  this.pizzaPrice=0
+};
+
+
+function pizzaDeliver(orderName,orderNumber,location){
+    
+  this.name= orderName;
+  this.numbe=orderNumber;
+  this.location= location;
+};
+
+
 $(document).ready(function() {
     $("#order-details ,.card").hide();
     $(".delivery").hide();
@@ -12,13 +29,7 @@ $("form#new-contact").submit(function(event) {
     var pizzaTopping = $("input#topping").val();
     var pizza = new pizza(size, crust,topping);
 
-    function pizza(size,crust,topping){
-      this.pizzaSize=size;
-      this.pizzaCrust=crust;
-      this.pizzaTopping=topping;
-      this.pizzaPrice=0;
-  };
-  
+
 
     $("submit").each(function() {
       var orderName = $(this).find("input#name").val();
@@ -28,13 +39,9 @@ $("form#new-contact").submit(function(event) {
       pizzaOrder.location.push(deliver)
     });
 
-    function pizzaDeliver(orderName,orderNumber,location){
     
-      this.orderName= name;
-      this.orderNumber= number;
-      this.location= location;
-  };
-
+});
+});
   
   
 
@@ -118,5 +125,4 @@ function pizzaDeliver(orderName,orderNumber,location){
 
 let thanks = function(){
   alert('thank you for your order.')
-}
- 
+};
