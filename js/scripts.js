@@ -35,9 +35,9 @@ $("form#new-contact").submit(function(event) {
       this.location= location;
   };
   
-  pizzaDeliver.name.location
+  
 
-    $("ul#order").append("<li><span class='order'>" + new.orderNumber() + "</span></li>");
+  $("ul#order").append("<li><span class='order'>" + new.orderName() + "</span></li>");
 
 
   
@@ -107,70 +107,6 @@ function Address(address) {
     alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
 };
 
-  /*delivery things
-
-
-var amount = function Price(price, crust, topping){
-    return price+crust+topping;
-};
-
-$(document).ready(function(){
-    $('button').click(function(){
-       $('div').slideToggle(1000);
-    });
-    $("#submit-pizza").click(function() {
-        $("#deliver").toggle();
-      });
-    
-      $("#checkout-btn").click(function() {
-        $("#order-details").toggle();
-      });
-    $('button').click(function(){
-        $('.order-details').show(1000)
-    })
-});
-$("#submit-pizza").click(function() {
-    $(".deliver").toggle();
-  });
-
-  $("#checkout-btn").click(function() {
-    $("#order-details").toggle();
-  });
-
-
-
-$(document).ready(function () {
-    $("#deliver").click(function () {
-        alert("Delivery charges: 100 ")
-        prompt("Enter you name ")
-        prompt("Enter your location")
-        prompt("Enter your address")
-        alert("Your order will be deliver to your location")
- 
-    })});
-
-    function fn1(){
-    var select = document.getElementById("bigg");
-    alert(select.options[select.selectedIndex].value)
-};
-
-function pizzaDeliver(orderName,orderNumber,location){
-    alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
-};
-
-
-pizzaOrder.prototype.giveMePizza = function(size, crust, topping){
-    if(size=='big'){price = 900}
-    else if(size=='medium'){price = 700}
-    else(size=='small');{price = 500}
-
-    return price + crust + topping
+let thanks = function(){
+  alert('thank you for your order.')
 }
-var crust = function addCrust(price){
-    return price*0.15
-};
-
-
-var topping = function addTopping(price){
-    return price*0.2
-};*/
