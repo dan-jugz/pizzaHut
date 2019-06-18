@@ -25,7 +25,7 @@ $("form#new-contact").submit(function(event) {
       var orderNumber = $(this).find("input#contact").val();
       var location = $(this).find("input#location").val();
       var pizzaOrder = new pizza(size, crust,topping)
-      pizzaOrder.pizzaCost.push(deliver)
+      pizzaOrder.location.push(deliver)
     });
 
     function pizzaDeliver(orderName,orderNumber,location){
@@ -34,6 +34,7 @@ $("form#new-contact").submit(function(event) {
       this.orderNumber= number;
       this.location= location;
   };
+
   
   
 
@@ -111,7 +112,7 @@ function Address(address) {
     this.deliveryAddress = (address);
   }
 
-  function pizzaDeliver(orderName,orderNumber,location){
+function pizzaDeliver(orderName,orderNumber,location){
     alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
 };
 
