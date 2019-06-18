@@ -1,13 +1,7 @@
 $(document).ready(function() {
-    $("#order-details").hide();
+    $("#order-details ,.card").hide();
     $(".delivery").hide();
 
-function pizzaDeliver(orderName,orderNumber,location){
-    
-    this.orderName= name;
-    this.orderNumber= number;
-    this.location= location;
-};
 
 
 $("form#new-contact").submit(function(event) {
@@ -26,26 +20,25 @@ $("form#new-contact").submit(function(event) {
   };
   
 
-    $("").each(function() {
+    $("submit").each(function() {
       var orderName = $(this).find("input#name").val();
       var orderNumber = $(this).find("input#contact").val();
       var location = $(this).find("input#location").val();
       var pizzaOrder = new pizza(size, crust,topping)
-      newContact.addresses.push(deliver)
+      pizzaOrder.pizzaCost.push(deliver)
     });
 
-    $("ul#order").append("<li><span class='order'>" + new.fullName() + "</span></li>");
+    function pizzaDeliver(orderName,orderNumber,location){
+    
+      this.orderName= name;
+      this.orderNumber= number;
+      this.location= location;
+  };
+  
+  pizzaDeliver.name.location
 
-    $(".contact").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h2").text(newContact.fullName());
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-      $("ul#addresses").text("");
-      newContact.addresses.forEach(function(address) {
-      $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
-      });
-    });
+    $("ul#order").append("<li><span class='order'>" + new.orderNumber() + "</span></li>");
+
 
   
 function pizza(size,crust,topping){
@@ -109,6 +102,10 @@ function Address(address) {
     this.address = address;
     this.deliveryAddress = (address);
   }
+
+  function pizzaDeliver(orderName,orderNumber,location){
+    alert(orderName + "'s pizza will be delivered to " + location + "in 30 minutes. we will contact " + orderNumber)
+};
 
   /*delivery things
 
