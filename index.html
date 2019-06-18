@@ -18,36 +18,44 @@
 <div class="container row">   
     <div class="mydiv col-5">
             <u><h5> Enter the specifications of your order.</h5></u>
-        <label for="time">Select a size</label>
-        <select name="sizes" id="bigg">
+        <label for="sizes">Select a size</label>
+        <select name="sizes" id="sizes">
             <option value="big">big(900)</option>
             <option value="medium">medium(700)</option>
             <option value="small">small(500)</option>
         </select>
    
-            <label for="time">Select a crust</label>
-            <select name="crustes" id="crest">
+            <label for="crust">Select a crust</label>
+            <select name="crust" id="crust">
                 <option value="stuffed">stuffed</option>
                 <option value="crispy">crispy</option>
                 <option value="gluten-free">gluten free</option>
             </select>
     
-            <label for="time">Select a topping </label> <br>
-            <input type="radio" name="cheese" value="100"> Cheese<br>
-            <input type="radio" name="Brocoli" value="100"> Brocoli<br>
-            <input type="radio" name="Mushroom" value="150"> Mushroom<br>
-            <input type="radio" name="pineapple" value="150"> pineapple<br>
-            <input type="radio" name="black" value="200"> Black olives<br>
-            <input type="radio" name="GingerAndKale" value="200"> Ginger and kale<br>
-           
+        <div id="topping">
+            <label for="topping">Select a topping </label> <br>
+            <input type="radio" name="cheese" value="cheese"> Cheese<br>
+            <input type="radio" name="Brocoli" value="brocoli"> Brocoli<br>
+            <input type="radio" name="Mushroom" value="mushroom"> Mushroom<br>
+            <input type="radio" name="pineapple" value="pineapple"> pineapple<br>
+            <input type="radio" name="black" value="black-olives"> Black olives<br>
+            <input type="radio" name="GingerAndKale" value="ginger-and-kale"> Ginger and kale<br>
+        </div> 
                
     <input type="number" id="quantity" placeholder="How many pizzas d'you want">
     <button type="submit" id="submit-pizza">Submit order</button>
 </div>
 </div>
 
+<div class="card bg-info">
+    <div class="card-body text-center">
+      <p class="card-text">your order </p>
+      <ul id="order"></ul>
+    </div>
+  </div>
+
 <form>
-<div class="delivery">
+<div class="deliver">
     <p>Do you want your pizza to be delivered to your location for ksh 150 transport?</p>
         <button onclick="pizzaDeliver()">Yes</button>
         <button onclick="thanks()">No</button>

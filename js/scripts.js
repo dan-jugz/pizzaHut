@@ -2,17 +2,50 @@ $(document).ready(function() {
     $("#order-details").hide();
     $(".delivery").hide();
 
-function pizzaOrder(orderName,orderNumber,location,crust,topping,delivery){
+function pizzaDeliver(orderName,orderNumber,location){
     
-    this.orderName=orderName;
-    this.orderNumber=orderNumber;
-    this.location=location;
-}
+    this.orderName= name;
+    this.orderNumber= number;
+    this.location= location;
+};
 
-let orderName =document.getElementById("name").value;
-let orderNumber =document.getElementById("number").value;
-let location =document.getElementById("location").value;
 
+$("form#new-contact").submit(function(event) {
+    event.preventDefault();
+
+    var pizzaSize = $("input#sizes").val();
+    var pizzaCrust = $("input#crust").val();
+    var pizzaTopping = $("input#topping").val();
+    var pizza = new pizza(size, crust,topping);
+
+    function pizza(size,crust,topping){
+      this.pizzaSize=size;
+      this.pizzaCrust=crust;
+      this.pizzaTopping=topping;
+      this.pizzaPrice=0;
+  };
+  
+
+    $("").each(function() {
+      var orderName = $(this).find("input#name").val();
+      var orderNumber = $(this).find("input#contact").val();
+      var location = $(this).find("input#location").val();
+      var pizzaOrder = new pizza(size, crust,topping)
+      newContact.addresses.push(deliver)
+    });
+
+    $("ul#order").append("<li><span class='order'>" + new.fullName() + "</span></li>");
+
+    $(".contact").last().click(function() {
+      $("#show-contact").show();
+      $("#show-contact h2").text(newContact.fullName());
+      $(".first-name").text(newContact.firstName);
+      $(".last-name").text(newContact.lastName);
+      $("ul#addresses").text("");
+      newContact.addresses.forEach(function(address) {
+      $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
+      });
+    });
 
   
 function pizza(size,crust,topping){
@@ -22,11 +55,11 @@ function pizza(size,crust,topping){
     this.pizzaPrice=0;
 };
 
-    var grandTotal = [];
+  
     var pizzaSize = ["big", "medium", "small"];
     var pizzaCrust = ["crispy", "stuffed", "gluten-free"];
-    var pizzaTopping = ["cheese", "brocoli", "mushroom", "black-olives","pineapple","ginger-and-kale"];
-  
+    var pizzaTopping = ["cheese", "brocoli", "mushroom","pineapple", "black-olives","ginger-and-kale"];
+    var grandTotal = [];
 
 
 pizza.prototype.pizzaCost = function(){
@@ -64,11 +97,11 @@ pizza.prototype.pizzaCost = function(){
 };
 
 Order.prototype.finalCost = function() {
-    var cartTotalPrice = [];
+    var totalPrice = [];
     for (var arrayElement = 0; arrayElement < grandTotal.length; arrayElement++) {
-      cartTotalPrice += grandTotal[arrayElement];
+      totalPrice += grandTotal[arrayElement];
     }
-    return cartTotalPrice;
+    return totalPrice;
   };
 
 
@@ -77,6 +110,7 @@ function Address(address) {
     this.deliveryAddress = (address);
   }
 
+  /*delivery things
 
 
 var amount = function Price(price, crust, topping){
@@ -99,7 +133,7 @@ $(document).ready(function(){
     })
 });
 $("#submit-pizza").click(function() {
-    $("#deliver").toggle();
+    $(".deliver").toggle();
   });
 
   $("#checkout-btn").click(function() {
@@ -107,7 +141,7 @@ $("#submit-pizza").click(function() {
   });
 
 
-/*delivery things
+
 $(document).ready(function () {
     $("#deliver").click(function () {
         alert("Delivery charges: 100 ")
@@ -139,6 +173,7 @@ var crust = function addCrust(price){
     return price*0.15
 };
 
+
 var topping = function addTopping(price){
     return price*0.2
-};****\
+};*/
