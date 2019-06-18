@@ -98,6 +98,14 @@ Order.prototype.finalCost = function() {
   };
 
 
+$(document).ready(function(){
+  $('#submit-pizza').click(function(){
+     $('.order,.deliver').slideToggle(1000);
+  });
+  $("#pizzaDeliver").click(function() {
+      $(".order-details").show(1000);
+    });
+
 function Address(address) {
     this.address = address;
     this.deliveryAddress = (address);
@@ -110,3 +118,4 @@ function Address(address) {
 let thanks = function(){
   alert('thank you for your order.')
 }
+ 
